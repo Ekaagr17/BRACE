@@ -1,0 +1,34 @@
+{
+  "instances": [
+    {
+      "name": "Standard Enterprise Controls (n=8)",
+      "budget": 120.0,
+      "items": [
+        {"id": 1, "name": "Next-Gen Firewall Upgrade", "cost": 35.0, "value": 45.0, "category": "Perimeter"},
+        {"id": 2, "name": "Endpoint Detection & Response (EDR)", "cost": 45.0, "value": 60.0, "category": "Endpoint"},
+        {"id": 3, "name": "Intrusion Detection System (IDS/IPS)", "cost": 25.0, "value": 35.0, "category": "Network"},
+        {"id": 4, "name": "Micro-Segmentation & VLANs", "cost": 40.0, "value": 55.0, "category": "Network"},
+        {"id": 5, "name": "Data Encryption at Rest", "cost": 20.0, "value": 30.0, "category": "Data"},
+        {"id": 6, "name": "Immutable Backup & Recovery", "cost": 30.0, "value": 40.0, "category": "Operations"},
+        {"id": 7, "name": "Zero Trust Identity & MFA", "cost": 25.0, "value": 38.0, "category": "Identity"},
+        {"id": 8, "name": "Automated Patch Management", "cost": 15.0, "value": 25.0, "category": "Operations"}
+      ],
+      "known_optimal_value": 168.0,
+      "known_optimal_cost": 120.0
+    },
+    {
+      "name": "Greedy Suboptimal Counterexample (n=3)",
+      "budget": 50.0,
+      "items": [
+        {"id": 1, "name": "High-Ratio Sensor", "cost": 10.0, "value": 15.0, "ratio": 1.5, "category": "Perimeter"},
+        {"id": 2, "name": "High-Value Core SIEM", "cost": 20.0, "value": 24.0, "ratio": 1.2, "category": "Operations"},
+        {"id": 3, "name": "Enterprise EDR Platform", "cost": 30.0, "value": 36.0, "ratio": 1.2, "category": "Endpoint"}
+      ],
+      "greedy_selected": [1, 2],
+      "greedy_value": 39.0,
+      "optimal_selected": [2, 3],
+      "optimal_value": 60.0,
+      "optimality_gap_percent": 35.0
+    }
+  ]
+}

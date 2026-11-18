@@ -1,0 +1,1 @@
+"""BRACE FastAPI application."""

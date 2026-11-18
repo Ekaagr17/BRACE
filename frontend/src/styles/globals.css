@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  body {
+    @apply bg-[#0a0c0f] text-[#f8fafc] font-sans;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Custom high-tech scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #11141a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #283142;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff1e42;
+  }
+
+  /* Selection: Stark Red tint */
+  ::selection {
+    background: rgba(255, 30, 66, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .orion-card {
+    @apply bg-[#171c24] border border-[#283142] rounded-lg p-5 shadow-lg;
+  }
+
+  .orion-glow-red {
+    box-shadow: 0 0 16px rgba(255, 30, 66, 0.22);
+    border-color: rgba(255, 30, 66, 0.4);
+  }
+
+  .orion-glow-gold {
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.22);
+    border-color: rgba(212, 175, 55, 0.4);
+  }
+
+  .orion-glow-cyan {
+    box-shadow: 0 0 16px rgba(0, 240, 255, 0.18);
+    border-color: rgba(0, 240, 255, 0.35);
+  }
+
+  .orion-btn-primary {
+    @apply bg-[#ff1e42] text-white font-semibold px-4 py-2 rounded border border-[#d4af37]/40
+           transition-colors duration-150 hover:bg-[#e01637];
+  }
+
+  .orion-btn-gold {
+    @apply bg-[#d4af37] text-black font-semibold px-4 py-2 rounded
+           transition-colors duration-150 hover:bg-[#c29e2e];
+  }
+
+  .orion-btn-secondary {
+    @apply border border-[#283142] text-[#f8fafc] font-medium px-4 py-2 rounded
+           transition-colors duration-150 hover:bg-[#1e2430] hover:border-[#d4af37]/50;
+  }
+
+  .orion-btn-danger {
+    @apply bg-[#ff1e42] text-white font-semibold px-4 py-2 rounded
+           transition-colors duration-150 hover:bg-[#e01637];
+  }
+
+  .orion-input {
+    @apply bg-[#11141a] border border-[#283142] rounded px-3 py-2
+           text-white placeholder-[#64748b] focus:outline-none focus:border-[#d4af37]
+           transition-colors duration-150;
+  }
+
+  .orion-label {
+    @apply text-xs font-medium uppercase tracking-wider text-[#94a3b8];
+  }
+
+  /* React Flow overrides */
+  .react-flow__background {
+    background-color: #11141a !important;
+  }
+  .react-flow__minimap {
+    background-color: #171c24 !important;
+    border: 1px solid #283142 !important;
+    border-radius: 4px !important;
+  }
+}
